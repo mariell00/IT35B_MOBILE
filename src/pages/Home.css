@@ -1,0 +1,23 @@
+/* This makes the container fill the screen and centers the card */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* This makes your card larger */
+.qr-card {
+  width: 90%;
+  max-width: 320px; /* Limits size on larger screens */
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Ensures the QR code is clear and has padding */
+.qr-card img {
+  padding: 20px;
+  background: white;
+}
