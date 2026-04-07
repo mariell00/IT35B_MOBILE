@@ -6,7 +6,7 @@ import {
 import { homeOutline, logOutOutline, informationCircleOutline } from "ionicons/icons"; // <-- fixed icon
 import { Redirect, Route } from "react-router-dom";
 import Home from "./Home";
-import About from "./About"; // <-- make sure this exists
+import About from "./About"; 
 
 const Menu: React.FC = () => {
     const path = [
