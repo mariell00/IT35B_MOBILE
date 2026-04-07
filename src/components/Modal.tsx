@@ -18,7 +18,7 @@ function Modal() {
   const input = useRef<HTMLIonInputElement>(null);
 
   const [message, setMessage] = useState(
-    'I love myself'
+    ''
   );
 
   function confirm() {
@@ -30,41 +30,6 @@ function Modal() {
       setMessage(`Hello, ${event.detail.data}!`);
     }
   }
-
-  return (
-    <>
-      <IonButton id="open-modal" expand="block">
-        Open Modal
-      </IonButton>
-      <p>{message}</p>
-      <IonModal ref={modal} trigger="open-modal" onWillDismiss={(event) => onWillDismiss(event)}>
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot="start">
-              <IonButton onClick={() => modal.current?.dismiss()}>Cancel</IonButton>
-            </IonButtons>
-            <IonTitle>Welcome</IonTitle>
-            <IonButtons slot="end">
-              <IonButton strong={true} onClick={() => confirm()}>
-                Confirm
-              </IonButton>
-            </IonButtons>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent className="ion-padding">
-          <IonItem>
-            <IonInput
-              label="Enter your name"
-              labelPlacement="stacked"
-              ref={input}
-              type="text"
-              placeholder="Your name"
-            />
-          </IonItem>
-        </IonContent>
-      </IonModal>
-    </>
-  );
 }
 
 export default Modal;
